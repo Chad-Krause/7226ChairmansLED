@@ -4,14 +4,14 @@
 #endif
 
 
-int input1 = 2, 
-    input2 = 3,
+int input1 = 6, 
+    input2 = 5,
     input3 = 4,
-    input4 = 5,
-    input5 = 6;
+    input4 = 3,
+    input5 = 2;
 
 #define LED_PIN    8
-#define LED_COUNT 10
+#define LED_COUNT 60
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 
 const uint32_t purple = strip.Color(112,40,163);
@@ -57,7 +57,7 @@ void accomplishments(bool on) {
     color = off;
   }
 
-  set_color(color, 0, 2);
+  set_color(color, 0, 12);
 }
 
 void future_goals(bool on) {
@@ -68,7 +68,7 @@ void future_goals(bool on) {
     color = off;
   }
 
-  set_color(color, 4, 2);
+  set_color(color, 24, 12);
 }
 
 void opportunities(bool on) {
@@ -79,7 +79,7 @@ void opportunities(bool on) {
     color = off;
   }
 
-  set_color(color, 6, 2);
+  set_color(color, 36, 12);
 }
 
 void community_outreach(bool on) {
@@ -90,7 +90,7 @@ void community_outreach(bool on) {
     color = off;
   }
 
-  set_color(color, 8, 2);
+  set_color(color, 48, 12);
 }
 
 void fostering(bool on) {
@@ -101,7 +101,7 @@ void fostering(bool on) {
     color = off;
   }
 
-  set_color(color, 2, 2);
+  set_color(color, 12, 12);
 }
 
 void set_color(uint32_t color, int starting_led_number, int led_count) {
